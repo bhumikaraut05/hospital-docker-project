@@ -1,0 +1,59 @@
+<!-- LifeCare Hospital Doctors Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctors - LifeCare Hospital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/doctors.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">LifeCare Hospital</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html" class="active">Doctors</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="mode-toggle" aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <!-- Filter Section -->
+  <section class="filter-section fade-in">
+    <h2>Our Doctors</h2>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-dept="All">All</button>
+      <button class="filter-btn" data-dept="Cardiology">Cardiology</button>
+      <button class="filter-btn" data-dept="Neurology">Neurology</button>
+      <button class="filter-btn" data-dept="Orthopedics">Orthopedics</button>
+      <button class="filter-btn" data-dept="Pediatrics">Pediatrics</button>
+    </div>
+  </section>
+
+  <!-- Doctors Grid -->
+  <section class="doctors-grid-section fade-in">
+    <div id="doctors-grid" class="doctors-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div>Contact: 123-456-7890 | info@lifecare.com</div>
+      <div>123 Health St, Wellness City</div>
+      <div>
+        <a href="index.html">Home</a> |
+        <a href="doctors.html">Doctors</a> |
+        <a href="appointment.html">Appointment</a> |
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>&copy; 2026 LifeCare Hospital</div>
+    </div>
+  </footer>
+</body>
+</html>

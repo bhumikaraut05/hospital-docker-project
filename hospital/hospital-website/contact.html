@@ -1,0 +1,68 @@
+<!-- LifeCare Hospital Contact Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - LifeCare Hospital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">LifeCare Hospital</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="mode-toggle" aria-label="Toggle dark mode"></button>
+    </div>
+  </nav>
+
+  <!-- Contact Info Section -->
+  <section class="contact-section fade-in">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div><strong>Address:</strong> 123 Health St, Wellness City</div>
+      <div><strong>Phone:</strong> 123-456-7890</div>
+      <div><strong>Email:</strong> info@lifecare.com</div>
+      <div><strong>Working Hours:</strong> Mon-Sat 8:00 AM - 8:00 PM</div>
+    </div>
+    <form id="contact-form" novalidate>
+      <div class="form-group">
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="contactName" required>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="contactEmail" required>
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="contactMessage" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="cta-btn">Send Message</button>
+      <div id="contact-success" class="success-message"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div>Contact: 123-456-7890 | info@lifecare.com</div>
+      <div>123 Health St, Wellness City</div>
+      <div>
+        <a href="index.html">Home</a> |
+        <a href="doctors.html">Doctors</a> |
+        <a href="appointment.html">Appointment</a> |
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>&copy; 2026 LifeCare Hospital</div>
+    </div>
+  </footer>
+</body>
+</html>
