@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat "docker build -t %IMAGE_NAME% ."
+                bat "docker build -t %IMAGE_NAME% ./hospital/hospital-website"
             }
         }
 
@@ -26,8 +26,17 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat "docker run -d -p %PORT%:8080 --name %CONTAINER_NAME% %IMAGE_NAME%"
+                bat "docker run -d -p %PORT%:80 --name %CONTAINER_NAME% %IMAGE_NAME%"
             }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ SUCCESS: Application deployed at http://localhost:8080"
+        }
+        failure {
+            echo "❌ FAILED: Check Jenkins console output"
         }
     }
 }
